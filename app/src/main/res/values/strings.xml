@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PRAC1</string>
+    <string name="rollDice">ROLL THE DICE</string>
+    <string name="playerName">Enter your Name</string>
+    <string name="playRules">Try you Luck</string>
+
 </resources>
