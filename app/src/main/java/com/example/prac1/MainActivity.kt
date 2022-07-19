@@ -1,30 +1,36 @@
 package com.example.prac1
 
+import android.content.Context
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     lateinit var diceImg: ImageView
     lateinit var numberText: TextView
+    lateinit var editPlayerName: EditText
+    lateinit var playerNameTV: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         diceImg = findViewById(R.id.diceImg)
-        numberText=findViewById(R.id.numberText)
+        numberText = findViewById(R.id.numberText)
+        editPlayerName = findViewById(R.id.editPlayerName)
+        playerNameTV = findViewById(R.id.playerName)
         val button: Button = findViewById(R.id.rollButton)
         button.setOnClickListener { rollDice() }
+        val updateButton = findViewById<Button>(R.id.updatePlayerNameBtn)
+        updateButton.setOnClickListener { updatePlayerName(it) }
     }
 
     private fun rollDice() {
         val randomNum = (1..6).random()
         //val numberText: TextView = findViewById(R.id.numberText)
-       // val diceImg: ImageView = findViewById(R.id.diceImg)
+        // val diceImg: ImageView = findViewById(R.id.diceImg)
         numberText.text = randomNum.toString()
         val imgSrc = when (randomNum) {
             1 -> R.drawable.dice_1
@@ -37,5 +43,14 @@ class MainActivity : AppCompatActivity() {
 
         diceImg.setImageResource(imgSrc)
         Toast.makeText(this, randomNum.toString(), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun updatePlayerName(view: View) {
+        playerNameTV.text = editPlayerName.text
+        editPlayerName.setText("")
+        editPlayerName.clearFocus()
+        //Hide Keyboard after update player name
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }

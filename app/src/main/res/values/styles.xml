@@ -7,4 +7,11 @@
         <item name="android:padding">@dimen/small_padding</item>
 
     </style>
+
+    <style name="NameStyle">
+
+        <item name="android:layout_margin">@dimen/layout_margin</item>
+        <item name="android:fontFamily">@font/comic_neue_bold</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
 </resources>

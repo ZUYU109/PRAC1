@@ -1,7 +1,29 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">PRAC1</string>
-    <string name="rollDice">ROLL THE DICE</string>
-    <string name="playerName">Enter your Name</string>
-    <string name="playRules">Try you Luck</string>
+    <string name="rollDice">ROLL DICE TO START</string>
+    <string name="playerName"></string>
+    <string name="playRules">
+    a) If the roll is a 7 or 11, the shooter wins the round.
+    \n\nb) If the roll is 2,3 or 12, the shooter loses the round.
+    \n\nc) If the first cast is a 4,5,6,8,9 or 10 the the shooter keeps casting the dice until:
+    \n\n1) a 7 occurs
+    \n\n2) the number from the first cast occurs again
+    \n\n2) the number from the first cast occurs again
+         \n\na) If the roll is a 7 or 11, the shooter wins the round.
+    \n\nb) If the roll is 2,3 or 12, the shooter loses the round.
+    \n\nc) If the first cast is a 4,5,6,8,9 or 10 the the shooter keeps casting the dice until:
+    \n\n1) a 7 occurs
+    \n\n2) the number from the first cast occurs again
+         \n\na) If the roll is a 7 or 11, the shooter wins the round.
+    \n\nb) If the roll is 2,3 or 12, the shooter loses the round.
+    \n\nc) If the first cast is a 4,5,6,8,9 or 10 the the shooter keeps casting the dice until:
+    \n\n1) a 7 occurs
+    \n\n2) the number from the first cast occurs again
+    </string>
+    <string name="rulesText">
+
+</string>
+    <string name="editPlayerName">Type name here</string>
+    <string name="updatePlayerNameTxt">Update</string>
 
 </resources>
